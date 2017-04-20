@@ -85,7 +85,15 @@ public class Knjiga {
             this.prisutan = prisutan;
         }
 
-        public String toString(){
+    public ForeignCollection<Oblast> getOblasti() {
+        return oblasti;
+    }
+
+    public void setOblasti(ForeignCollection<Oblast> oblasti) {
+        this.oblasti = oblasti;
+    }
+
+    public String toString(){
             return this.id + " " + this.naslov + " " + this.brojStrana + " " + this.datumIzdanja;
         }
 }

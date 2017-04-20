@@ -63,6 +63,7 @@ public class Oblast {
         this.knjiga = knjiga;
     }
 
+
     public String toString(){
         return this.id  + "" + this.naziv + "" + this.pocetnaStrana;
     }
