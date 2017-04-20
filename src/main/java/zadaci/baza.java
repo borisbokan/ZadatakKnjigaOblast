@@ -25,8 +25,8 @@ public class baza {
             }
 
 
-            public ConnectionSource konekcija(){
-                return conn;
+            public ConnectionSource getKonekcija(){
+                return this.conn;
             }
 
 
