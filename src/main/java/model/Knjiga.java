@@ -1,6 +1,8 @@
 package model;
 
+import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.ArrayList;
@@ -29,11 +31,14 @@ public class Knjiga {
         //Nije u bazi
         private boolean prisutan;//ne cuva se u bazi
 
-        //TODO: Uradi posle
-        //ArrayList<Oblast> oblasti;
+         @ForeignCollectionField(foreignFieldName = "knjiga")
+         private ForeignCollection<Oblast> oblasti;
 
+    public Knjiga(){
 
-        public Knjiga(String _naslov, int _brojStrana, Date _datumIzdavanja){
+    }
+
+    public Knjiga(String _naslov, int _brojStrana, Date _datumIzdavanja){
             this.naslov=_naslov;
             this.brojStrana=_brojStrana;
             this.datumIzdanja=_datumIzdavanja;
