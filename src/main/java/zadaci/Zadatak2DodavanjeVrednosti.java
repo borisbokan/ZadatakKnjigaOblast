@@ -27,22 +27,31 @@ public class Zadatak2DodavanjeVrednosti {
             DAOOblast=DaoManager.createDao(dbcon.getKonekcija(),Oblast.class);
 
 
-
         Knjiga knji1=new Knjiga("Java programiranje", 650,  new Date());
+        DAOKnjiga.create(knji1);
+        
         Knjiga knji2=new Knjiga("Android programiranje", 500,  new Date());
-
+        DAOKnjiga.create(knji2);
 
         Oblast oblast1=new Oblast("Uvod",2);
         oblast1.setKnjiga(knji1);
+        DAOOblast.create(oblast1);
+
         Oblast oblast2=new Oblast("Naredbe",10);
         oblast2.setKnjiga(knji1);
+        DAOOblast.create(oblast2);
+
         Oblast oblast3=new Oblast("Aritmeticki operatori",20);
         oblast3.setKnjiga(knji1);
+        DAOOblast.create(oblast3);
+
         Oblast oblast4=new Oblast("Android operativni sistem",2);
         oblast4.setKnjiga(knji2);
+        DAOOblast.create(oblast4);
 
         Oblast oblast5=new Oblast("Activity klasa",30);
         oblast5.setKnjiga(knji2);
+        DAOOblast.create(oblast5);
 
 
 
@@ -62,7 +71,6 @@ public class Zadatak2DodavanjeVrednosti {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
 
 
         dbcon.zatvoriKonekciju();

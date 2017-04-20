@@ -65,7 +65,7 @@ public class Oblast {
 
 
     public String toString(){
-        return this.id  + "" + this.naziv + "" + this.pocetnaStrana;
+        return this.id  + " - " + this.naziv + " - " + this.pocetnaStrana;
     }
 
 }
