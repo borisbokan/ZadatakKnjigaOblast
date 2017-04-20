@@ -5,7 +5,9 @@ package zadaci;
  */
 public class Zadatak3IzmenaVrednosti {
 
-    public static void main(String[] args){
+    private static baza dbcon;
 
+    public static void main(String[] args){
+        dbcon= new baza();
     }
 }

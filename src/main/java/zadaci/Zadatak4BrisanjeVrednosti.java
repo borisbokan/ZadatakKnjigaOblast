@@ -5,7 +5,9 @@ package zadaci;
  */
 public class Zadatak4BrisanjeVrednosti {
 
-        public static void main(String[] args){
+    private static baza dbcon;
 
+    public static void main(String[] args){
+            dbcon= new baza();
         }
 }
